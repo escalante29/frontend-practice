@@ -1,9 +1,11 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import FetchUsers from './components/FetchUsers.vue'
+import DefineModelExample from './components/DefineModelExample.vue';
 </script>
 
 <template>
-  <HelloWorld :total="5" />
+  <!-- <FetchUsers :total="5" /> -->
+  <DefineModelExample />
 </template>
 
 <style scoped>
