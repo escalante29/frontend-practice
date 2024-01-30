@@ -1,11 +1,14 @@
 <script setup>
-import FetchUsers from './components/FetchUsers.vue'
+// import FetchUsers from './components/FetchUsers.vue'
+import { ref } from 'vue';
 import DefineModelExample from './components/DefineModelExample.vue';
+
+const userEmail = ref(null)
 </script>
 
 <template>
   <!-- <FetchUsers :total="5" /> -->
-  <DefineModelExample />
+  <DefineModelExample v-model="userEmail"/>
 </template>
 
 <style scoped>
