@@ -7,7 +7,7 @@ const Stack = require('./stack');
  */
 function isBalanced(str) {
   const myStack = new Stack();
-  for (char of str) {
+  for (const char of str) {
     if (char === '(') {
       myStack.push(char);
     } else if (char === ')') {
