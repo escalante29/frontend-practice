@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
 import { HousingService } from '../housing.service';
+import _ from 'lodash-es';
 
 @Component({
   selector: 'app-home',
@@ -44,8 +45,9 @@ export class HomeComponent {
       this.filteredLocationList = this.housingLocationList;
       return;
     }
-    this.filteredLocationList = this.housingLocationList.filter(
-      housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
-    );
+    this.filteredLocationList = _.filter(this.housingLocationList, housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase()))
+    // this.filteredLocationList = this.housingLocationList.filter(
+    //   housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
+    // );
   }
 }
