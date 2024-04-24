@@ -1,0 +1,12 @@
+Hello {{city}}!
+@if(isLoggedIn) {
+  Welcome back, Friend!
+}
+@for(user of users; track user.id) {
+  <p (click)='greet(user.name)'>{{user.id}}. {{user.name}}</p>
+  <app-user [greeting]="greeting"></app-user>
+}
+
+<!-- 
+  {% comment %} <p [contentEditable]='isEditable'>{{user.id}}. {{user.name}}</p> {% endcomment %}
+-->
